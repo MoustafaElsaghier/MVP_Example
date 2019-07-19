@@ -2,4 +2,8 @@
     <string name="app_name">MVP-Example</string>
     <string name="welcome_to_home_screen">Welcome To Home Screen</string>
     <string name="textview">TextView</string>
+    <string name="login_screen">Login Screen</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
 </resources>
