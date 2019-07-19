@@ -16,6 +16,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        initViews();
+    }
+
+    private void initViews() {
         email = findViewById(R.id.email_tv);
         pass = findViewById(R.id.pass_tv);
         login = findViewById(R.id.login_btn);
@@ -25,10 +30,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.login_btn) {
+        if (v.getId() == login.getId()) {
             String emailText = email.getText().toString();
             String passText = pass.getText().toString();
-
+            LoginPresenterImpl presenter = new LoginPresenterImpl(this);
+            presenter.login(emailText, passText);
         }
     }
 }
